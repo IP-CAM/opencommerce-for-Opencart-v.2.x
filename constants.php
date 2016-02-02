@@ -6,19 +6,19 @@ define('ENVIRONMENT', IS_ADMIN ? 'admin' : 'catalog');
 //get domain name
 define('DOMAINNAME', isset($_SERVER['SERVER_NAME']) ? $_SERVER['SERVER_NAME'] : null);
 
-//define core directory
-define('DIR_CORE', realpath(DIR_ROOT . '/core/'));
+//define opencart directory
+define('DIR_CORE', realpath(DIR_ROOT . '/opencart/'));
 
 $base_url = DOMAINNAME . $_SERVER['SCRIPT_NAME'];
-$base_url = str_replace(['/core/admin/', '/core', '/index.php'], '/', $base_url);
+$base_url = str_replace(['/opencart/admin/', '/opencart', '/index.php'], '/', $base_url);
 define('BASEURL', $base_url);
 
 // HTTP
-define('HTTP_SERVER', 'http://' . BASEURL . 'core/admin/');
+define('HTTP_SERVER', 'http://' . BASEURL . 'opencart/admin/');
 define('HTTP_CATALOG', 'http://' . BASEURL);
 
 // HTTPS
-define('HTTPS_SERVER', 'https://' . BASEURL . 'core/admin/');
+define('HTTPS_SERVER', 'https://' . BASEURL . 'opencart/admin/');
 define('HTTPS_CATALOG', 'http://' . BASEURL);
 
 // DIR
